@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMYX DJING</title>
+  <style>
+    :root {
+      --purple: #8b00ff;
+      --dark-purple: #4a0080;
+      --black: #0a0a0a;
+      --accent: #c026d3;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--black);
+      color: white;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--purple);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: white;
+      border: 2px solid var(--purple);
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+      background: var(--purple);
+      transform: translateY(-3px);
+    }
+
+    /* Hero Section - Top Background */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                  url('minimyx1 Cover copy.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--purple), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Grid Layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      padding: 4rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Cards with solid color backgrounds */
+    .card {
+      background: #1a0033;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--dark-purple);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      display: grid;
+      grid-template-rows: 220px auto;   /* Fixed image area height */
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(139, 0, 255, 0.3);
+    }
+
+    /* Solid color "images" for each card */
+    .card-image {
+      height: 220px;
+    }
+
+    .mixes-image     { background-color: #6b00cc; }
+    .events-image    { background-color: #4a0080; }
+    .contact-image   { background-color: #8b00ff; }
+    .inspiration-image { background-color: #c026d3; }
+
+    .card-content {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .card-content h3 {
+      font-size: 1.6rem;
+      color: var(--purple);
+    }
+
+    .card-btn {
+      background: var(--purple);
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+
+    .card-btn:hover {
+      background: var(--accent);
+      transform: scale(1.05);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      :root {
+        font-size: 12px;
+      }
+
+      .grid-container {
+        grid-template-columns: 1fr;
+        padding: 2rem 5%;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+      }
+
+      .nav-buttons {
+        gap: 0.8rem;
+      }
+
+      .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      :root {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">AMYX DJING</a>
+    <div class="nav-buttons">
+      <button class="nav-btn">Mixes</button>
+      <button class="nav-btn">Events</button>
+      <button class="nav-btn">Contact</button>
+      <button class="nav-btn">Inspiration</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>AMYX DJING</h1>
+    </div>
+  </section>
+
+  <!-- Grid Layout -->
+  <div class="grid-container">
+    
+    <!-- Mixes Card -->
+    <div class="card">
+      <div class="card-image mixes-image"></div>
+      <div class="card-content">
+        <h3>Mixes</h3>
+        <button class="card-btn">Listen Now</button>
+      </div>
+    </div>
+
+    <!-- Events Card -->
+    <div class="card">
+      <div class="card-image events-image"></div>
+      <div class="card-content">
+        <h3>Events</h3>
+        <button class="card-btn">View Events</button>
+      </div>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="card">
+      <div class="card-image contact-image"></div>
+      <div class="card-content">
+        <h3>Contact</h3>
+        <button class="card-btn">Get In Touch</button>
+      </div>
+    </div>
+
+    <!-- Inspiration Card -->
+    <div class="card">
+      <div class="card-image inspiration-image"></div>
+      <div class="card-content">
+        <h3>Inspiration</h3>
+        <button class="card-btn">Browse Inspiration</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert(`Navigated to ${btn.textContent} 🔥`);
+      });
+    });
+  </script>
+
+</body>
+</html>
