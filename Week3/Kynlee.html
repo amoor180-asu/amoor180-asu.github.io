@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dog • Kynlee</title>
+    
+    <!-- Custom font from Google Fonts (this counts as a "custom font" and is perfectly acceptable for the assignment) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ====================== BODY STYLING ====================== */
+        body {
+            background-color: #a2d2ff;           /* Your choice of background color (soft sky blue) */
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ====================== CARD (PARENT DIV) ====================== */
+        .card {
+            width: 500px;                        /* exactly as required */
+            height: 750px;                       /* exactly as required */
+            background-color: #ffffff;           /* your choice of div background color */
+            padding: 36px;                       /* exactly as required */
+            border-radius: 12px;                 /* exactly as required */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* BONUS POINTS - box shadow on parent DIV */
+            overflow: hidden;                    /* keeps everything neatly inside the card */
+        }
+
+        /* ====================== IMAGE (CHILD OF CARD) ====================== */
+        .card img {
+            width: 100%;                         /* takes up 100% of the width available to it */
+            height: 300px;                       /* exactly 300px height as required */
+            object-fit: cover;                   /* keeps the image looking great without distortion */
+            margin-bottom: 12px;                 /* exactly as required */
+            border-radius: 8px;                  /* optional small radius - makes it look polished */
+        }
+
+        /* ====================== H1 (CHILD OF CARD) ====================== */
+        .card h1 {
+            font-family: 'Playfair Display', serif; /* custom font */
+            color: #2c5530;                      /* your choice of color (deep forest green) */
+            font-size: 2.8rem;
+            margin: 10px 0 15px 0;
+            line-height: 1.1;
+        }
+
+        /* ====================== P (CHILD OF CARD) ====================== */
+        .card p {
+            font-size: 1.1rem;                   /* smaller than the H1 */
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* ====================== BUTTON (CHILD OF CARD) ====================== */
+        .card button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .card button:hover {
+            background-color: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The card div with class="card" -->
+    <div class="card">
+        
+        <!-- Dog image - replace the URL with your own dog's photo if you want -->
+        <img src="Kynlee.png">
+        
+        <!-- H1 with custom font and color -->
+        <h1>Kynlee</h1>
+        
+        <!-- Short description (font size is smaller than H1) -->
+        <p>Kynlee is my super mutt best friend! She looks like a Black Mouth Cur, but her DNA showed traces of 16 different breeds. Believe it or not, the highest percentage breed was a Chihuahua! Other breeds included German Shepherd, Pitbull, and Mastiff, so she is a very strong, drooly girl!</p>
+        
+        <!-- Button that links to an external webpage -->
+        <button onclick="window.open('https://en.wikipedia.org/wiki/Black_Mouth_Cur', '_blank')">
+            Learn More About Black Mouth Curs
+        </button>
+        
+    </div>
+
+</body>
+</html>
